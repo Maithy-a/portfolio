@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Serif+Text:ital@0;1&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 :root {
 
     --font-1 : "Public Sans", sans-serif;
@@ -18,32 +19,19 @@
     /* color-1(#eabe7c)
      * color-2(#23967f)
      */
-    --color-1 : hsla(36, 72%, 70%, 1);
-    --color-2 : hsla(168, 62%, 36%, 1);
+    --color-1 : #eabe7b;
+    --color-2 : #23957e;
 
     /* theme color variations
      */
-    --color-1-lighter : hsla(36, 72%, 90%, 1);
-    --color-1-light   : hsla(36, 72%, 80%, 1);
-    --color-1-dark    : hsla(36, 72%, 60%, 1);
-    --color-1-darker  : hsla(36, 72%, 50%, 1);
-    --color-2-lighter : hsla(168, 62%, 56%, 1);
-    --color-2-light   : hsla(168, 62%, 46%, 1);
-    --color-2-dark    : hsla(168, 62%, 26%, 1);
-    --color-2-darker  : hsla(168, 62%, 16%, 1);
-
-    /* feedback colors
-     * color-error(#ffd1d2), color-success(#c8e675), 
-     * color-info(#d7ecfb), color-notice(#fff099)
-     */
-    --color-error           : hsla(359, 100%, 91%, 1);
-    --color-success         : hsla(76, 69%, 68%, 1);
-    --color-info            : hsla(205, 82%, 91%, 1);
-    --color-notice          : hsla(51, 100%, 80%, 1);
-    --color-error-content   : hsla(359, 50%, 50%, 1);
-    --color-success-content : hsla(76, 29%, 28%, 1);
-    --color-info-content    : hsla(205, 32%, 31%, 1);
-    --color-notice-content  : hsla(51, 30%, 30%, 1);
+    --color-1-lighter : #f8e9d3;
+    --color-1-light   : #f1d3a7;
+    --color-1-dark    : #e2a850;
+    --color-1-darker  : #db9224;
+    --color-2-lighter : #49d4b9;
+    --color-2-light   : #2dbea1;
+    --color-2-dark    : #196b5b;
+    --color-2-darker  : #104238;
 
     /* shades 
      * generated using 
@@ -97,8 +85,8 @@
     /* preloader
      */
     --color-preloader-bg : var(--color-gray-10);
-    --color-loader       : white;
-    --color-loader-light : rgba(255, 255, 255, 0.1);
+    --color-loader       : #ffffff;
+    --color-loader-light : #ffffff1a;
 
     /* others
      */
@@ -2868,12 +2856,10 @@ img.u-pull-left {
  * -------------------------------------------------------------------- */
 .mobile-home-link a,
 .main-nav a {
-    display             : block;
-    font-size           : 10px;
-    font-weight         : 400;
+    font-size           : 20px;
+    font-weight         : 900;
     line-height         : var(--header-height);
-    text-transform      : uppercase;
-    letter-spacing      : .35em;
+    font-family: "Kaushan Script", cursive;
     color               : white;
     transition-property : color, background-color;
 }
@@ -4159,4 +4145,16 @@ img.u-pull-left {
     .ss-go-top {
         right : 6vw;
     }
+}
+.disclaimer a
+{
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Kaushan Script", cursive;
+    font-weight: 700;
+}
+.disclaimer a:hover
+{
+    text-decoration: underline;
+    text-underline-offset: 2.5px;
 }
