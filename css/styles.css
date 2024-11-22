@@ -2854,12 +2854,21 @@ img.u-pull-left {
 /* --------------------------------------------------------------------
  * ## main navigation
  * -------------------------------------------------------------------- */
-.mobile-home-link a,
-.main-nav a {
+.mobile-home-link a{
     font-size           : 20px;
     font-weight         : 900;
     line-height         : var(--header-height);
     font-family: "Kaushan Script", cursive;
+    color               : white;
+    transition-property : color, background-color;
+}
+.main-nav a {
+    display             : block;
+    font-size           : 10px;
+    font-weight         : 400;
+    line-height         : var(--header-height);
+    text-transform      : uppercase;
+    letter-spacing      : .35em;
     color               : white;
     transition-property : color, background-color;
 }
