@@ -2860,7 +2860,7 @@
     transition-property : color, background-color;
  }
 
- .main-nav a {
+ .main-nav .smoothscroll {
      display             : block;
      font-size           : 10px;
      font-weight         : 400;
@@ -3689,7 +3689,7 @@
      font-size        : calc(var(--text-size) * 0.9447);
      line-height      : var(--vspace-0_875);
      color            : rgba(0, 0, 0, 0.75);
-     overflow-y       : auto;
+     overflow-y       :auto;
      position         : relative;
  }
  
@@ -3749,7 +3749,8 @@
  }
  
  .modal-popup__details {
-     background-color : rgba(0, 0, 0, 0.3);
+     background-color : #047451;
+     border-radius: 2px;
      font-size        : var(--text-xs);
      line-height      : var(--vspace-1_25);
      color            : white;
@@ -3758,7 +3759,7 @@
      top              : var(--vspace-1);
      left             : var(--vspace-1);
  }
- 
+
  .modal-popup__details:focus,
  .modal-popup__details:hover {
      background-color : var(--color-body);
