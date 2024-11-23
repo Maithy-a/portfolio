@@ -2860,7 +2860,7 @@
     transition-property : color, background-color;
  }
 
- .main-nav .smoothscroll {
+ .main-nav a {
      display             : block;
      font-size           : 10px;
      font-weight         : 400;
@@ -4206,9 +4206,7 @@
     display: flex;
     animation: scrolling var(--marquee-animation-duration) linear infinite;
   }
-  .marquee-content:hover {
-    animation-play-state: paused;
-  } 
+ 
   @keyframes scrolling {
     0% { transform: translateX(0); }
     100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
