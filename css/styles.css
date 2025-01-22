@@ -3755,13 +3755,14 @@ img.u-pull-left {
     font-size: calc(var(--text-size) * 0.9447);
     line-height: var(--vspace-0_875);
     color: rgba(0, 0, 0, 0.75);
-    overflow: scroll;
+    overflow: auto;
     position: relative;
 }
 
 .modal-popup img {
     margin-bottom: var(--vspace-0_75);
     width: 100%;
+    height: 100%;
 }
 
 .modal-popup__desc h5 {
@@ -3815,21 +3816,22 @@ img.u-pull-left {
     display: none;
 }
 .modal-popup__close{
-    background-color: #938e8e87;
+    background-color: #00000087;
     font-size: var(--text-xs);
     line-height: var(--vspace-1_25);
-    color: white;
+    color:  var(--color-1);
     padding: 0 1.2rem;
     position: absolute;
-    top: 0px;
-    right: 0px;
+    border-radius: 8px;
+    top: 10px;
+    right: 10px;
 }
 
 .modal-popup__details {
     background-color: #000000a7;
     font-size: var(--text-xs);
     line-height: var(--vspace-1_25);
-    color: white;
+    color:  var(--color-1);
     padding: 0 1.2rem;
     position: absolute;
     top: 10px;
@@ -3837,8 +3839,8 @@ img.u-pull-left {
 }
 
 .modal-popup__details:focus,
-.modal-popup__details:hover {
-    background-color: var(--color-body);
+.modal-popup__details:hover, .modal-popup__close:hover {
+    background-color: var(--color-1);
     color: white;
 }
 
