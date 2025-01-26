@@ -623,11 +623,6 @@ button.swiper-pagination-bullet {
 
 /* Preloader */
 
-:root {
-    /*
-    --swiper-preloader-color: var(--swiper-theme-color);
-    */
-}
 
 .swiper-lazy-preloader {
     width: 42px;
