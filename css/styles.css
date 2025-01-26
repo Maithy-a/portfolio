@@ -3815,11 +3815,12 @@ img.u-pull-left {
 .modal-popup__cat li:last-child::after {
     display: none;
 }
-.modal-popup__close{
+
+.modal-popup__close {
     background-color: #00000087;
     font-size: var(--text-xs);
     line-height: var(--vspace-1_25);
-    color:  var(--color-1);
+    color: var(--color-1);
     padding: 0 1.2rem;
     position: absolute;
     top: 10px;
@@ -3830,7 +3831,7 @@ img.u-pull-left {
     background-color: #000000a7;
     font-size: var(--text-xs);
     line-height: var(--vspace-1_25);
-    color:  var(--color-1);
+    color: var(--color-1);
     padding: 0 1.2rem;
     position: absolute;
     top: 10px;
@@ -3838,7 +3839,8 @@ img.u-pull-left {
 }
 
 .modal-popup__details:focus,
-.modal-popup__details:hover, .modal-popup__close:hover {
+.modal-popup__details:hover,
+.modal-popup__close:hover {
     background-color: var(--color-1);
     color: white;
 }
