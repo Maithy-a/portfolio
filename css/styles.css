@@ -4193,14 +4193,13 @@ img.u-pull-left {
 
 }
 
-.ss-go-top a:focus .bi-arrow-up,
-.ss-go-top a:hover .bi-arrow-up {
+.ss-go-top a:focus i,
+.ss-go-top a:hover i {
     color: black;
     transition: color 0.3s ease-in-out;
 }
 
-.ss-go-top .bi-arrow-up {
-    font-size: var(--vspace-0_5);
+.ss-go-top i {
     color: white;
     transition: color 0.3s ease-in-out;
 }
@@ -4314,9 +4313,6 @@ img.u-pull-left {
 }
 
 @media (max-width: 600px) {
-    html {
-        font-size: 12px;
-    }
 
     :root {
         --marquee-width: 100vw;
