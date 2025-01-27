@@ -338,6 +338,7 @@ button,
 [type="reset"],
 [type="submit"] {
     -webkit-appearance: button;
+    appearance: button;
 }
 
 button::-moz-focus-inner,
@@ -389,6 +390,7 @@ textarea {
 
 [type="search"] {
     -webkit-appearance: textfield;
+    appearance: textfield;
     outline-offset: -2px;
 }
 
@@ -2804,8 +2806,8 @@ img.u-pull-left {
 }
 
 /* --------------------------------------------------------------------
-  * ## circles
-  * -------------------------------------------------------------------- */
+* ## circles
+* -------------------------------------------------------------------- */
 .s-pagewrap .circles,
 .s-pagewrap .circles span {
     position: absolute;
@@ -3168,6 +3170,7 @@ img.u-pull-left {
 .intro-content .text-huge-title {
     font-size: calc(var(--text-huge) * var(--text-huge-multiplier));
     padding-right: 5vw;
+    font-weight: 700;
 }
 
 /* --------------------------------------------------------------------
@@ -3816,17 +3819,6 @@ img.u-pull-left {
     display: none;
 }
 
-.modal-popup__close {
-    background-color: #00000087;
-    font-size: var(--text-xs);
-    line-height: var(--vspace-1_25);
-    color: var(--color-1);
-    padding: 0 1.2rem;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
 .modal-popup__details {
     background-color: #000000a7;
     font-size: var(--text-xs);
@@ -4257,6 +4249,7 @@ img.u-pull-left {
 :root {
     --marquee-width: 100vw;
     --marquee-height: 20vh;
+    --marquee-elements: 12;
     --marquee-elements-displayed: 5;
     --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
     --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
@@ -4280,20 +4273,15 @@ img.u-pull-left {
     z-index: 1;
 }
 
-.marquee:before {
-    left: 0;
-}
-
-.marquee:after {
-    right: 0;
-
-}
-
 .marquee-content {
     list-style: none;
     height: 100%;
     display: flex;
     animation: scrolling var(--marquee-animation-duration) linear infinite;
+}
+
+.marquee-content:hover {
+    animation-play-state: paused;
 }
 
 @keyframes scrolling {
@@ -4310,17 +4298,18 @@ img.u-pull-left {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    /* text-align: center; */
     flex-shrink: 0;
     width: var(--marquee-element-width);
     max-height: 100%;
     font-size: calc(var(--marquee-height)*3/4);
+    /* 5rem; */
     white-space: nowrap;
 }
 
 .marquee-content li img {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     border: 2px solid #eee;
 }
 

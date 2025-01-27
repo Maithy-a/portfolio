@@ -1,4 +1,4 @@
-/*=================
+/* =================
  * Theme Third-party Stylesheets
  * Template Ver. 1.0.0
  * 02-16-2021
@@ -560,6 +560,7 @@ button.swiper-pagination-bullet {
 .swiper-scrollbar {
     border-radius: 10px;
     position: relative;
+    touch-action: none;
     -ms-touch-action: none;
     background: rgba(0, 0, 0, 0.1);
 }
