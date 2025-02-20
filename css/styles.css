@@ -244,6 +244,7 @@ html {
 
 body {
     margin: 0;
+    background-image: url("../images/noise.png");
 }
 
 main {
