@@ -3382,14 +3382,14 @@ img.u-pull-left {
 
 .about-info__pic {
     object-fit: cover;
-    margin: 1em;
     vertical-align: bottom;
-    width: 85%;
+    width: auto;
     height: auto;
 }
 @media screen and (max-width: 800px) {
     .about-info__pic {
         width: 100%;
+        margin: 0;
     }
     
 }
