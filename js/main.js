@@ -1,4 +1,4 @@
-/* Maithyaverse 1.0.0 - Main JS */
+/* Maithya 1.0.0 - Main JS */
 
 (function (html) {
     "use strict";
