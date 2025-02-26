@@ -244,7 +244,7 @@ html {
 
 body {
     margin: 0;
-    background-image: url("../images/noise.png");
+    /* background-image: url("../images/noise.png"); */
     background-position: center;
     background-attachment: fixed;
     background-size:contain;
@@ -371,10 +371,6 @@ legend {
     max-width: 100%;
     padding: 0;
     white-space: normal;
-}
-
-progress {
-    vertical-align: baseline;
 }
 
 textarea {
@@ -2104,51 +2100,6 @@ button.btn--pill {
 
 
 /* ===================================================================
-  * # TABLE
-  *
-  *
-  * ------------------------------------------------------------------- */
-
-table {
-    border-width: 0;
-    width: 100%;
-    max-width: 100%;
-    font-family: var(--font-1);
-    border-collapse: collapse;
-}
-
-th,
-td {
-    padding: var(--vspace-0_5) 3.2rem calc(var(--vspace-0_5) - 1px);
-    text-align: left;
-    border-bottom: 1px solid var(--color-border);
-}
-
-th {
-    padding: var(--vspace-0_5) 3.2rem;
-    color: var(--color-text-dark);
-    font-family: var(--font-1);
-    font-weight: 600;
-}
-
-th:first-child,
-td:first-child {
-    padding-left: 0;
-}
-
-th:last-child,
-td:last-child {
-    padding-right: 0;
-}
-
-.table-responsive {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-}
-
-
-
-/* ===================================================================
   * # COMPONENTS
   *
   *
@@ -3231,17 +3182,22 @@ img.u-pull-left {
     justify-content: center;
 }
 
-.intro-scrolldown .bsc-mouse {
-    font-size: 42px;
+.intro-scrolldown i {
+    font-size: 23px;
     color: white;
     transition: all 0.3s ease-in-out;
 }
 
-.intro-scrolldown:focus .bsc-mouse,
-.intro-scrolldown:hover .bsc-mouse {
+.intro-scrolldown:focus i,
+.intro-scrolldown:hover i {
     color: var(--color-1);
+    transform: translateY(0.6rem);
 }
 
+.intro-scrolldown:hover svg{
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0.6rem);
+}
 
 
 /* ------------------------------------------------------------------- 
