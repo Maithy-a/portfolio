@@ -1,4 +1,3 @@
-/* Maithya 1.0.0 - Main JS */
 
 (function (html) {
     "use strict";
