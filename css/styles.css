@@ -3382,7 +3382,7 @@ img.u-pull-left {
 
 .about-info__pic {
     object-fit: cover;
-    margin: 0;
+    margin: 1em;
     vertical-align: bottom;
     width: 85%;
     height: auto;
