@@ -3385,6 +3385,7 @@ img.u-pull-left {
     margin: 0;
     vertical-align: bottom;
     max-width: 100%;
+    height: auto;
 }
 
 .about-info__text {
