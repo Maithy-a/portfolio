@@ -174,7 +174,7 @@
         }
     };
 
-    /* Lightbox
+    /* folio lightbox
      * ------------------------------------------------------ */
     const ssLightbox = function () {
         const folioLinks = document.querySelectorAll('.folio-list__item-link');
