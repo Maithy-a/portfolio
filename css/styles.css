@@ -4179,6 +4179,9 @@ img.u-pull-left {
         right: 6vw;
     }
 }
+.disclaimer {
+    color: var(--color-gray-3);
+}
 
 .disclaimer a {
     text-decoration: none;
