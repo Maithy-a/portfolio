@@ -2,38 +2,42 @@
 <html class="no-js ss-preload" lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <!-- Character encoding and SEO metadata -->
+    <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Bonface Maithya">
     <meta name="description"
-        content="Portfolio of Bonface Maithya, a web developer specializing in creative, responsive, user-friendly websites.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+        content="Portfolio of Bonface Maithya, a web developer specializing in creative, responsive, and user-friendly websites.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMaithya</title>
-    <meta name="google-site-verification" content="vEeaBVhkg62yMnRXfJSvijkFkn8gP0sztiwKabeRYE0" />
+    <meta name="google-site-verification" content="vEeaBVhkg62yMnRXfJSvijkFkn8gP0sztiwKabeRYE0">
 
-    <!-- Preload critical assets -->
+    <!-- Preload critical assets for performance -->
     <link rel="preload" href="css/styles.css" as="style">
     <link rel="preload" href="images/about-photo.webp" as="image">
 
-    <!-- CSS (async loading) -->
+    <!-- CSS stylesheets with asynchronous loading -->
     <link rel="stylesheet" href="css/vendor.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'">
+    <!-- Fallback for users with JavaScript disabled -->
     <noscript>
         <link rel="stylesheet" href="css/vendor.css">
         <link rel="stylesheet" href="css/styles.css">
     </noscript>
 
-    <!-- Favicons -->
+    <!-- Favicons for branding across devices -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/icons/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="images/icons/favicon_io/site.webmanifest"
+    <link rel="manifest" href="images/icons/favicon_io/site.webmanifest">
 
+    <!-- External icon libraries with async loading -->   
 
+    <!-- Boxicons -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" integrity="sha512-..."
         crossorigin="anonymous" media="print" onload="this.media='all'">
 
-    <!-- Google Tag Manager  -->
+    <!-- Google Tag Manager for analytics -->
     <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-KQF4HGMP"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -115,8 +119,8 @@
                 <div class="row about-info wide" data-animate-block>
                     <div class="column lg-6 md-12 about-info__pic-block">
                         <img src="images/about-photo.webp" alt="Bonface Maithya - Professional Portrait"
-                            class="about-info__pic" data-animate-el style="border-radius: 6px;" margin-left="auto" margin-right="auto" width="600" height="800"
-                            loading="lazy">
+                            class="about-info__pic" data-animate-el style="border-radius: 6px;" margin-left="auto"
+                            margin-right="auto" width="600" height="800" loading="lazy">
                     </div>
                     <div class="column lg-6 md-12">
                         <div class="about-info__text">
@@ -586,7 +590,9 @@
                         target="_blank">Maithy-a</a></p>
             </div>
             <div class="ss-go-top">
-                <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa-solid fa-chevron-up"></i></a>
+                <a class="smoothscroll" title="Back to Top" href="#top">
+                    <i class='bx bxs-chevron-up'></i>
+                </a>
             </div>
         </div>
     </footer>
