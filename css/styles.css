@@ -4294,3 +4294,43 @@ img.u-pull-left {
         width: 5rem;
     }
 }
+
+<div class="marquee">
+    <ul class="marquee-content">
+        <li><i class='bx bxl-nodejs'></i></li>
+        <li><i class='bx bxl-bootstrap'></i></li>
+        <li><i class='bx bxl-react'></i></li>
+        <li><i class='bx bxl-git'></i></li>
+        <li><i class='bx bxl-javascript'></i></li>
+        <li><i class='bx bxl-php'></i></li>
+        <li><i class='bx bxl-css3'></i></li>
+        <li><i class='bx bxl-html5'></i></li>
+        <li><i class='bx bxl-sass'></i></li>
+        <li><i class='bx bxl-github'></i></li>
+        <li><i class='bx bxl-laravel'></i></li>
+        <li><i class='bx bxl-python'></i></li>
+        <li><i class='bx bxl-figma'></i></li>
+    </ul>
+</div>
+
+<div class="ss-go-top">
+    <a class="smoothscroll" title="Back to Top" href="#top">
+        <i class='bx bx-chevron-up'></i>
+    </a>
+</div>
+
+.marquee-content i {
+    font-size: 2.4rem;
+    color: var(--color-3);
+}
+
+.ss-go-top i {
+    font-size: 2rem;
+    color: var(--color-3);
+}
+
+/* Adjust icon sizes and colors as needed */
+.bx {
+    vertical-align: middle;
+    line-height: inherit;
+}
