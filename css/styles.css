@@ -2381,10 +2381,6 @@ button.btn--pill {
     width: 5%;
 }
 
-.skill-bars li .percent15 {
-    width: 15%;
-}
-
 .skill-bars li .percent20 {
     width: 20%;
 }
@@ -3143,40 +3139,44 @@ img.u-pull-left {
   * ## intro scrolldown
   * -------------------------------------------------------------------- */
 .intro-scrolldown {
-    display: block;
-    height: var(--vspace-1);
-    width: var(--vspace-1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: absolute;
-    bottom: 4.8rem;
-    right: 5.8rem;
-}
-
-.intro-scrolldown {
-    display: inline-flex;
+    bottom: 6.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.6rem;
+    line-height: 1;
+    color: var(--color-3);
+    text-decoration: none;
+    display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.intro-scrolldown i {
-    font-size: 23px;
-    color: white;
+    width: 4.8rem;
+    height: 4.8rem;
     transition: all 0.3s ease-in-out;
 }
 
-.intro-scrolldown:focus i,
-.intro-scrolldown:hover i {
-    color: var(--color-1);
-    transform: translateY(0.6rem);
+.intro-scrolldown:focus {
+    outline: 2px solid var(--color-5);
+    outline-offset: 2px;
 }
 
-.intro-scrolldown:hover svg{
-    transition: all 0.3s ease-in-out;
-    transform: translateY(0.6rem);
+.intro-scrolldown:hover {
+    transform: scale(1.1);
 }
 
+.intro-scrolldown:hover svg {
+    transform: translateY(-2px);
+}
+
+.intro-scrolldown svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: var(--color-3);
+}
+
+.intro-scrolldown:hover svg path {
+    fill: var(--color-5);
+}
 
 /* ------------------------------------------------------------------- 
   * responsive:
