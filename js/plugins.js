@@ -1,5 +1,3 @@
-
-
 /**
  * Basic Lightbox
  * v. 5.0.3
