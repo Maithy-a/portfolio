@@ -4099,13 +4099,14 @@ img.u-pull-left {
 .ss-copyright span {
     font-size: var(--text-sm);
     display: inline-block;
+    color: var(--color-gray-3);
 }
 
 .ss-copyright span::after {
     content: "|";
     display: inline-block;
     padding: 0 .8rem 0 1rem;
-    color: rgba(255, 255, 255, 0.1);
+    color: var(--color-gray-3);
 }
 
 .ss-copyright span:last-child::after {
@@ -4183,7 +4184,7 @@ img.u-pull-left {
     text-decoration: none;
     font-family: "Kaushan Script", cursive;
     font-weight: 700;
-    color: var( --color-gray-2);
+    color: var( --color-gray-3);
 }
 
 .disclaimer a:hover {
