@@ -2877,7 +2877,8 @@ img.u-pull-left {
     }
 
     .intro-social {
-        left: calc(100% - 4rem)
+        left: calc(100% - 4rem);
+        color: var(--color-3);
     }
 
     .intro-scrolldown {
