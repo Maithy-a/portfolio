@@ -3127,12 +3127,12 @@ img.u-pull-left {
 }
 
 .intro-social a {
-    color: var(--color-text-light);
+    color: var(--color-gray-3);
 }
 
 .intro-social a:focus,
 .intro-social a:hover {
-    color: white;
+    color: var(--color-1);
 }
 
 /* --------------------------------------------------------------------
