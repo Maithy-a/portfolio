@@ -1311,26 +1311,71 @@ img {
     justify-content: center;
     align-items: center;
     background: var(--color-body);
-    z-index: 500;
+    z-index: 9999;
     height: 100vh;
     width: 100%;
-    opacity: 1
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
 }
 
 .no-js #preloader {
-    display: none
+    display: none;
 }
 
 #loader {
-    width: var(--vspace-2);
-    height: var(--vspace-2);
+    width: 50px;
+    height: 50px;
     padding: 0;
-    background-color: white;
+    background-color: var(--color-1);
     border-radius: 100%;
     -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
-    animation: sk-scaleout 1.0s infinite ease-in-out
+    animation: sk-scaleout 1.0s infinite ease-in-out;
+    position: relative;
 }
 
+#loader::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid var(--color-1);
+    border-radius: 100%;
+    animation: pulse 2s infinite;
+}
+
+.s-pagewrap {
+    opacity: 0;
+    transition: opacity 0.8s ease-in;
+}
+
+.s-pagewrap.ss-loaded {
+    opacity: 1;
+}
+
+@keyframes sk-scaleout {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
 
 .btn,
 button,
