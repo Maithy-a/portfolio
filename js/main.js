@@ -1,4 +1,3 @@
-// minified version of the main.js file
 
 (function (html) {
   "use strict";
@@ -72,10 +71,9 @@
           item.classList.remove("ss-animated");
         });
 
-        // Fade out preloader
+  
         preloader.style.opacity = "0";
         
-        // Remove preloader and start content fade-in
         setTimeout(() => {
           preloader.style.display = "none";
           pageWrap.classList.add("ss-loaded");
