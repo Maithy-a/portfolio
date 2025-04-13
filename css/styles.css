@@ -1645,7 +1645,7 @@ img.u-pull-left {
     margin-top: 0
 }
 
-.mailtoui-modal {
+.mailtoui- {
     --mailtoui-modal-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08);
     --mailtoui-modal-head-bgcolor: var(--color-gray-18);
     --mailtoui-modal-head-title-color: white;
@@ -2666,23 +2666,29 @@ img.u-pull-left {
 .folio-list__proj-link:hover {
     transform: scale(1.2)
 }
+:root{
+    --modal-color:var(--color-1);
+}
 
 .modal-popup {
     max-width: 600px;
     margin: 5% auto;
     width: 95%;
     animation: fadeIn .3s ease-out;
-    background-color: white;
+    background-color: var(--modal-color);
+    border-radius: 0px 0px 20px 20px;
     font-size: calc(var(--text-size) * 0.9447);
     line-height: var(--vspace-0_875);
     color: rgba(0, 0, 0, 0.75);
     overflow: auto;
-    position: relative
+    z-index: 1000;
+    position:relative
 }
 
 .modal-popup img {
     margin-bottom: var(--vspace-0_75);
     width: 100%;
+    border-radius: 20px 20px 0px 0px;
     height: 100%
 }
 
