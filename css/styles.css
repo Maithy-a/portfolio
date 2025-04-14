@@ -3,7 +3,7 @@
 :root {
     --color-1: #eabe7b;
     --color-2: #23957e;
-    --color-gray-10:#181c25;
+    --color-gray-10: #181c25;
     --color-gray-9: #464951;
     --color-gray-8: #434445;
     --color-gray-7: #5b5b5c;
@@ -1359,6 +1359,7 @@ img {
         -webkit-transform: scale(0);
         transform: scale(0);
     }
+
     100% {
         -webkit-transform: scale(1.0);
         transform: scale(1.0);
@@ -1371,6 +1372,7 @@ img {
         transform: scale(1);
         opacity: 1;
     }
+
     100% {
         transform: scale(1.5);
         opacity: 0;
@@ -2666,8 +2668,9 @@ img.u-pull-left {
 .folio-list__proj-link:hover {
     transform: scale(1.2)
 }
-:root{
-    --modal-color:var(--color-1);
+
+:root {
+    --modal-color: var(--color-1);
 }
 
 .modal-popup {
@@ -2675,20 +2678,18 @@ img.u-pull-left {
     margin: 5% auto;
     width: 95%;
     animation: fadeIn .3s ease-out;
-    background-color: var(--modal-color);
-    border-radius: 0px 0px 20px 20px;
+    background-color: var(--color-2);
     font-size: calc(var(--text-size) * 0.9447);
     line-height: var(--vspace-0_875);
     color: rgba(0, 0, 0, 0.75);
     overflow: auto;
-    z-index: 1000;
-    position:relative
+    cursor: pointer;
+    position: relative
 }
 
 .modal-popup img {
     margin-bottom: var(--vspace-0_75);
     width: 100%;
-    border-radius: 20px 20px 0px 0px;
     height: 100%
 }
 
@@ -2713,7 +2714,12 @@ img.u-pull-left {
     line-height: var(--vspace-0_5);
     color: rgba(0, 0, 0, 0.6);
     padding-left: calc(0.875 * var(--space));
+    transition: color 3s ease-in;
+    font-weight: 300;
     position: relative
+}
+.modal-popup__cat li:hover{
+    color: var(--color-gray-3)
 }
 
 .modal-popup__cat::before {
