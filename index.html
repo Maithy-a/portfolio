@@ -12,31 +12,19 @@
     <meta name="google-site-verification" content="vEeaBVhkg62yMnRXfJSvijkFkn8gP0sztiwKabeRYE0">
     <meta name="p:domain_verify" content="8fe21a1a2637f4f2cc0c659a308ce415" />
 
-    <!-- Preload critical assets -->
-    <link rel="preload" href="css/styles.css" as="style">
-    <link rel="preload" href="https://i.ibb.co/nqn4LVpX/IMG-20250108-WA0010.jpg" as="image">
-
-    <!-- CSS stylesheets-->
     <link rel="stylesheet" href="css/vendor.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'">
 
-    <!-- Fallback for users with JavaScript disabled -->
-    <noscript>
-        <link rel="stylesheet" href="css/vendor.css">
-        <link rel="stylesheet" href="css/styles.css">
-    </noscript>
 
-    <!-- Favicons  -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/icons/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="images/icons/favicon_io/site.webmanifest">
 
-    <!-- Boxicons -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" integrity="sha512-..."
         crossorigin="anonymous" media="print" onload="this.media='all'">
 
-    <!-- Google Tag Manager  -->
+
     <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-KQF4HGMP"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -71,7 +59,7 @@
             <div class="row wide main-nav-wrap">
                 <nav class="column lg-12 main-nav">
                     <ul>
-                        <li><a href="index.html" class="home-link logo">Maithyas</a></li>
+                        <li><a href="index.html" class="home-link logo">Maithya</a></li>
                         <li class="current"><a href="#intro" class="smoothscroll">Home</a></li>
                         <li><a href="#about" class="smoothscroll">About</a></li>
                         <li><a href="#works" class="smoothscroll">Work</a></li>
@@ -151,7 +139,7 @@
                         </ul>
                     </div>
                 </div>
-<!-- 
+                <!-- 
                 <div class="marquee">
                     <ul class="marquee-content">
                         <li><i class='bx bxl-nodejs'></i></li>
@@ -663,7 +651,7 @@
             <footer class="s-footer">
                 <div class="row">
                     <div class="column ss-copyright">
-                        <span>Copyright
+                        <span>Copyright &copy;
                             <span id="currentYear"></span>
                         </span>
                         <span>Maithya</span>
@@ -675,26 +663,25 @@
                             <i class='bx bxs-chevron-up'></i>
                         </a>
                     </div>
+                    <script>
+                        document.getElementById("currentYear").textContent = new Date().getFullYear();
+                        const root = document.documentElement;
+                        const marqueeContent = document.querySelector("ul.marquee-content");
+                        const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+                        root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+                        for (let i = 0; i < marqueeElementsDisplayed; i++) {
+                            marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+                        }
+                    </script>
                 </div>
             </footer>
 
         </main>
     </div>
 
-    <!-- JS  -->
     <script src="js/plugins.js" defer></script>
     <script src="js/main.js" defer></script>
 
-    <script>
-        document.getElementById("currentYear").textContent = new Date().getFullYear();
-        const root = document.documentElement;
-        const marqueeContent = document.querySelector("ul.marquee-content");
-        const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
-        root.style.setProperty("--marquee-elements", marqueeContent.children.length);
-        for (let i = 0; i < marqueeElementsDisplayed; i++) {
-            marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
-        }
-    </script>
 </body>
 
 </html>
