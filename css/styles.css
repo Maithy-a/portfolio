@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kaushan+Script&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* COLORS */
 :root {
     --color-1: #eabe7b;
     --color-2: #23957e;
@@ -10,30 +11,7 @@
     --color-gray-4: #a1a1a2;
     --color-gray-3: #b9b9b9;
     --color-white: #fff;
-    --color-text: #fff;
-    --font-1: "DM Sans", sans-serif;
-    --vspace-0_125: .125rem;
-    --vspace-0_25: .25rem;
-    --vspace-0_5: .5rem;
-    --vspace-0_75: .75rem;
-    --vspace-0_875: .875rem;
-    --vspace-1: 1rem;
-    --vspace-1_25: 1.25rem;
-    --vspace-1_5: 1.5rem;
-    --vspace-1_75: 1.75rem;
-    --vspace-2: 2rem;
-    --vspace-2_5: 2.5rem;
-    --vspace-3: 3rem;
-    --vspace-3_5: 3.5rem;
-    --vspace-4: 4rem;
-    --vspace-4_5: 4.5rem;
-    --vspace-5: 5rem;
-    --width-full: 100%;
-    --width-max: 1200px;
-    --gutter: 2.4rem
-}
-
-:root {
+    --color-black: #000;
     --color-text: var(--color-gray-4);
     --color-text-dark: var(--color-white);
     --color-text-light: var(--color-gray-7);
@@ -46,13 +24,36 @@
     --color-loader-light: #ffffff1a;
     --color-body: var(--color-gray-10);
     --color-border: #2f333b;
-    --border-radius: 3px
+    --modal-color: var(--color-1);
 }
 
+/* TYPOGRAPHY */
 :root {
+    --font-1: "DM Sans", sans-serif;
+    --font-2: 'IBM Plex Sans', sans-serif;
+    --font-3: 'Inter', sans-serif;
+    --font-4: 'Kaushan Script', cursive;
+    --font-5: 'Roboto', sans-serif;
+    --font-mono: monospace, monospace;
     --base-size: 62.5%;
     --multiplier: 1;
     --base-font-size: calc(1.9rem * var(--multiplier));
+    --text-scale-ratio: 1.2;
+    --text-size: var(--base-font-size);
+    --text-xs: calc((var(--text-size) / var(--text-scale-ratio)) / var(--text-scale-ratio));
+    --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
+    --text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
+    --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
+    --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+    --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
+    --text-display-1: calc(var(--text-xxxl) * var(--text-scale-ratio));
+    --text-display-2: calc(var(--text-display-1) * var(--text-scale-ratio));
+    --text-display-3: calc(var(--text-display-2) * var(--text-scale-ratio));
+}
+
+/* SPACING & SIZING */
+:root {
     --space: calc(3.2rem * var(--multiplier));
     --vspace-0_125: calc(0.125 * var(--space));
     --vspace-0_25: calc(0.25 * var(--space));
@@ -72,28 +73,7 @@
     --vspace-4: calc(4 * var(--space));
     --vspace-4_5: calc(4.5 * var(--space));
     --vspace-5: calc(5 * var(--space));
-    --text-scale-ratio: 1.2;
-    --text-size: var(--base-font-size);
-    --text-xs: calc((var(--text-size) / var(--text-scale-ratio)) / var(--text-scale-ratio));
-    --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
-    --text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
-    --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
-    --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
-    --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
-    --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
-    --text-display-1: calc(var(--text-xxxl) * var(--text-scale-ratio));
-    --text-display-2: calc(var(--text-display-1) * var(--text-scale-ratio));
-    --text-display-3: calc(var(--text-display-2) * var(--text-scale-ratio));
-    --vspace-btn: var(--vspace-2)
-}
-
-@media screen and (max-width:600px) {
-    :root {
-        --multiplier: .875
-    }
-}
-
-:root {
+    --vspace-btn: var(--vspace-2);
     --width-full: 100%;
     --width-max: 1200px;
     --width-wide: 1400px;
@@ -102,18 +82,51 @@
     --width-narrow: 1000px;
     --width-narrower: 800px;
     --width-grid-max: var(--width-max);
-    --gutter: 2rem
+    --gutter: 2.4rem;
+    --border-radius: 3px;
 }
 
-@media screen and (max-width:1200px) {
-    :root {
-        --gutter: 1.6rem
-    }
+/* COMPONENTS & SPECIALS */
+:root {
+    --circle-width: 70vw;
+    --header-height: 6.4rem;
+    --marquee-width: 100vw;
+    --marquee-height: 20vh;
+    --marquee-elements: 12;
+    --marquee-elements-displayed: 5;
+    --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+    --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+    /* Mailto UI Colors */
+    --mailtoui-modal-bg: var(--color-2);
+    --mailtoui-modal-content-bg: var(--color-2);
+    --mailtoui-modal-head-bg: #23957e;
+    --mailtoui-modal-title-color: var(--color-text-dark);
+    --mailtoui-modal-close-color: var(--color-text-dark);
+    --mailtoui-modal-close-hover-color: var(--color-white);
+    --mailtoui-modal-body-bg: var(--color-border);
+    --mailtoui-button-bg: rgba(255, 255, 255, 0.12);
+    --mailtoui-button-text: var(--color-white);
+    --mailtoui-button-hover-bg: var(--color-white);
+    --mailtoui-button-hover-text: var(--color-2);
+    --mailtoui-email-bg: var(--color-border);
+    --mailtoui-email-text: var(--color-text-dark);
+    --mailtoui-copy-success-bg: #1f9d55;
+    --mailtoui-copy-success-text: var(--color-white);
 }
 
 @media screen and (max-width:600px) {
     :root {
-        --gutter: 1rem
+        --multiplier: .875;
+        --gutter: 1rem;
+        --marquee-width: 100vw;
+        --marquee-height: 16vh;
+        --marquee-elements-displayed: 3;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    :root {
+        --gutter: 1.6rem;
     }
 }
 
@@ -1481,6 +1494,60 @@ button.btn--large {
     line-height: var(--vspace-0_75)
 }
 
+@media screen and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
+        .main-nav a {
+            font-size: var(--text-md);
+            padding: var(--vspace-0_5) var(--vspace-1);
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .main-nav a {
+            font-size: var(--text-lg);
+            padding: var(--vspace-0_75) var(--vspace-1_5);
+        }
+    }
+
+    -nav a {
+        font-size: var(--text-md);
+        /* Adjust font size for better readability */
+        padding: var(--vspace-0_5) var(--vspace-1);
+        /* Adjust padding for spacing */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main-nav a {
+        font-size: var(--text-lg);
+        /* Further increase font size for smaller screens */
+        padding: var(--vspace-0_75) var(--vspace-1_5);
+
+        /* Adjust padding for spacing */
+        .main-nav a {
+            display: block;
+            font-size: 10px;
+            font-weight: 400;
+            line-height: var(--header-height);
+            text-transform: uppercase;
+            letter-spacing: .35em;
+            color: white;
+            transition-property: color, background-color
+        }
+
+        .main-nav a {
+            display: block;
+            font-size: 10px;
+            font-weight: 400;
+            line-height: var(--header-height);
+            text-transform: uppercase;
+            letter-spacing: .35em;
+            color: white;
+            transition-property: color, background-color
+        }
+    }
+}
+
 .skill-bars li .progress {
     background: var(--color-1);
     position: relative;
@@ -1653,17 +1720,19 @@ img.u-pull-left {
 }
 
 .mailtoui-modal-content button {
-    background-color:#eabe7b;
+    background-color: #eabe7b;
     transition: all .3s ease-in-out;
     font-weight: 400;
     font-size: 16px;
     margin: 0;
     padding: 0
 }
+
 .mailtoui-modal-content button:hover {
     background-color: #eabe7b;
     color: white
 }
+
 .mailtoui-modal-head {
     background-color: #23957e;
     font-size: 200;
@@ -1693,7 +1762,7 @@ img.u-pull-left {
 }
 
 .mailtoui-modal-body {
-    background-color:var(--color-border) 
+    background-color: var(--color-border)
 }
 
 .mailtoui-button-text {
@@ -1854,20 +1923,11 @@ img.u-pull-left {
     border-bottom: 1px solid var(--color-border)
 }
 
+
+/* --------------------------------------------------------------------
+ * ## main navigation
+ * -------------------------------------------------------------------- */
 .mobile-home-link a,
-.home-link {
-    font-size: 20px;
-    line-height: var(--header-height)
-}
-
-.logo {
-    text-transform: uppercase;
-    font-family: "Kaushan Script", cursive;
-    font-weight: 400;
-    letter-spacing: 0;
-    transition-property: color, background-color
-}
-
 .main-nav a {
     display: block;
     font-size: 10px;
@@ -1876,36 +1936,36 @@ img.u-pull-left {
     text-transform: uppercase;
     letter-spacing: .35em;
     color: white;
-    transition-property: color, background-color
+    transition-property: color, background-color;
 }
 
 .mobile-home-link a:focus,
 .mobile-home-link a:hover,
 .main-nav a:focus,
 .main-nav a:hover {
-    color: var(--color-1)
+    color: var(--color-1);
 }
 
 .mobile-home-link {
     display: inline-block;
-    position: relative
+    position: relative;
 }
 
 .mobile-home-link a {
     padding: 0 .4rem;
-    margin-left: 2.4rem
+    margin-left: 2.4rem;
 }
 
 .main-nav {
-    padding: 0
+    padding: 0;
 }
 
 .main-nav a {
-    padding: 0 2rem 0 2.4rem
+    padding: 0 2rem 0 2.4rem;
 }
 
 .main-nav .current a {
-    background-color: var(--color-gray-9)
+    background-color: var(--color-gray-9);
 }
 
 .main-nav ul {
@@ -1917,31 +1977,29 @@ img.u-pull-left {
     background-color: var(--color-body);
     border-width: 1px;
     border-color: var(--color-border);
-    border-style: none solid solid solid
+    border-style: none solid solid solid;
 }
 
 .main-nav li {
     flex: 1 1 0%;
     padding-left: 0;
-    border-right: 1px solid var(--color-border)
-}
-
-.main-nav li a {
-    font-size: 1.2rem;
-    font-weight: 600
+    border-right: 1px solid var(--color-border);
 }
 
 .main-nav li:last-child {
-    border-right: 0
+    border-right: none;
 }
 
+/* --------------------------------------------------------------------
+  * ## mobile menu toggle
+  * -------------------------------------------------------------------- */
 .mobile-menu-toggle {
     display: block;
     width: var(--header-height);
     height: var(--header-height);
     position: absolute;
     top: 0;
-    right: .8rem
+    right: .8rem;
 }
 
 .mobile-menu-toggle span {
@@ -1958,7 +2016,7 @@ img.u-pull-left {
     top: 50%;
     bottom: auto;
     left: auto;
-    transition: background-color .2s ease-in-out
+    transition: background-color 0.2s ease-in-out;
 }
 
 .mobile-menu-toggle span::before,
@@ -1967,55 +2025,61 @@ img.u-pull-left {
     width: 100%;
     height: 100%;
     background-color: inherit;
-    transition-duration: .2s, 0.2s;
-    transition-delay: .2s, 0s;
+    transition-duration: 0.2s, 0.2s;
+    transition-delay: 0.2s, 0s;
     position: absolute;
-    left: 0
+    left: 0;
 }
 
 .mobile-menu-toggle span::before {
     top: -8px;
-    transition-property: top, transform
+    transition-property: top, transform;
 }
 
 .mobile-menu-toggle span::after {
     bottom: -8px;
-    transition-property: bottom, transform
+    transition-property: bottom, transform;
 }
 
+/* is clicked 
+  */
 .mobile-menu-toggle.is-clicked span {
-    background-color: rgba(255, 255, 255, 0)
+    background-color: rgba(255, 255, 255, 0);
 }
 
 .mobile-menu-toggle.is-clicked span::before,
 .mobile-menu-toggle.is-clicked span::after {
     background-color: white;
-    transition-delay: 0s, 0.2s
+    transition-delay: 0s, 0.2s;
 }
 
 .mobile-menu-toggle.is-clicked span::before {
     top: 0;
-    transform: rotate(45deg)
+    transform: rotate(45deg);
 }
 
 .mobile-menu-toggle.is-clicked span::after {
     bottom: 0;
-    transform: rotate(-45deg)
+    transform: rotate(-45deg);
 }
 
-@media screen and (max-width:1000px) {
+/* ------------------------------------------------------------------- 
+  * responsive:
+  * site-header
+  * ------------------------------------------------------------------- */
+@media screen and (max-width: 1000px) {
     .main-nav-wrap {
-        width: 100%
+        width: 100%;
     }
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width: 800px) {
     .s-header {
-        height: var(--header-height)
+        height: var(--header-height);
     }
 
     .header-mobile {
-        display: block
+        display: block;
     }
 
     .main-nav-wrap {
@@ -2023,22 +2087,21 @@ img.u-pull-left {
         transform-origin: center top;
         background-color: var(--color-body);
         border-bottom: 1px solid var(--color-border);
-        box-shadow: var(--box-shadow)
+        box-shadow: var(--box-shadow);
     }
 
     .main-nav {
         padding: var(--vspace-1) 0 var(--vspace-1_5);
         transform: translateY(-2rem);
         opacity: 0;
-        visibility: hidden
+        visibility: hidden;
     }
 
     .main-nav a {
-        font-family: var(--font-2);
+        font-family: var(--font-3);
         font-size: var(--text-md);
-        font-weight: 400;
-        line-height: var(--vspace-0_875);
-        text-transform: none;
+        line-height: var(--vspace-0_75);
+        text-transform:none;
         letter-spacing: 0;
         padding: var(--vspace-0_5) 2.8rem;
         color: var(--color-text)
@@ -2046,12 +2109,12 @@ img.u-pull-left {
 
     .main-nav a:focus,
     .main-nav a:hover {
-        color: white
+        color: white;
     }
 
     .main-nav .current a {
         background-color: transparent;
-        color: var(--color-1)
+        color: var(--color-1);
     }
 
     .main-nav ul {
@@ -2059,46 +2122,47 @@ img.u-pull-left {
         background-color: transparent;
         text-align: left;
         margin: 0;
-        border: 0
+        border: none;
     }
 
     .main-nav ul li {
         display: block;
-        border: 0
+        border: none;
     }
 
     .main-nav ul li:first-child {
-        display: none
+        display: none;
     }
 
     .menu-is-open .s-header {
-        height: auto
+        height: auto;
     }
 
     .menu-is-open .header-mobile {
-        box-shadow: none
+        box-shadow: none;
     }
 
     .menu-is-open .main-nav-wrap {
         transform: scaleY(1);
-        transition: transform .4s cubic-bezier(0.215, 0.61, 0.355, 1);
-        transition-delay: 0s
+        transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition-delay: 0s;
     }
 
     .menu-is-open .main-nav {
         transform: translateY(0);
         opacity: 1;
         visibility: visible;
-        transition: all .4s cubic-bezier(0.215, 0.61, 0.355, 1);
-        transition-delay: .4s
+        transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition-delay: .4s;
     }
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
     .main-nav-wrap {
-        padding: 0
+        padding: 0;
     }
 }
+
 
 .s-intro {
     --gutter: 6rem;
@@ -2706,7 +2770,8 @@ img.u-pull-left {
     font-weight: 300;
     position: relative
 }
-.modal-popup__cat li:hover{
+
+.modal-popup__cat li:hover {
     color: var(--color-gray-3)
 }
 
@@ -3161,7 +3226,7 @@ img.u-pull-left {
     --mailtoui-modal-close-color: var(--color-text-dark);
     --mailtoui-modal-close-hover-color: var(--color-white);
     --mailtoui-modal-body-bg: var(--color-border);
-    --mailtoui-button-bg:rgba(255, 255, 255, 0.12);
+    --mailtoui-button-bg: rgba(255, 255, 255, 0.12);
     --mailtoui-button-text: var(--color-white);
     --mailtoui-button-hover-bg: var(--color-white);
     --mailtoui-button-hover-text: var(--color-2);
@@ -3173,7 +3238,7 @@ img.u-pull-left {
 
 /* Mailto Modal Container */
 .mailtoui-modal-content {
-    border-radius: 1.4rem;
+    border-radius: 1.2rem;
     background-color: var(--mailtoui-modal-content-bg);
 }
 
@@ -3206,12 +3271,10 @@ img.u-pull-left {
     font-weight: 300;
 }
 
-/* Mailto Modal Body */
 .mailtoui-modal-body {
     background-color: var(--mailtoui-modal-body-bg);
 }
 
-/* Mailto Buttons */
 .mailtoui-button-content,
 .mailtoui-button-copy {
     background-color: var(--mailtoui-button-bg);
@@ -3224,11 +3287,10 @@ img.u-pull-left {
 .mailtoui-button-content:focus,
 .mailtoui-button-copy:hover,
 .mailtoui-button-copy:focus {
-    background-color: var(--mailtoui-button-hover-bg);
+    background-color: #d1d1d1;
     color: var(--mailtoui-button-hover-text);
 }
 
-/* Mailto Copy Section */
 .mailtoui-copy {
     border-radius: var(--border-radius);
     box-shadow: none;
@@ -3253,7 +3315,6 @@ img.u-pull-left {
     border-radius: var(--border-radius);
 }
 
-/* Mailto Brand Link */
 .mailtoui-brand a {
     color: rgba(255, 255, 255, 0.12);
 }
