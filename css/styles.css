@@ -2736,7 +2736,8 @@ img.u-pull-left {
     margin: 5% auto;
     width: 95%;
     animation: fadeIn .3s ease-out;
-    background-color: var(--color-2);
+    background-color: var(--mailtoui-modal-head-bg);
+    color: var(--color-gray-3);
     font-size: calc(var(--text-size) * 0.9447);
     line-height: var(--vspace-0_875);
     color: rgba(0, 0, 0, 0.75);
@@ -3344,6 +3345,7 @@ img.u-pull-left {
     padding-top: var(--vspace-3);
     padding-bottom: var(--vspace-3);
     background-color: var(--color-4);
+    color: var(--color-gray-4);
 }
 
 .s-clients__content-block:first-child {
