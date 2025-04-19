@@ -2997,7 +2997,6 @@ img.u-pull-left {
 .s-footer {
     margin-top: auto;
     padding-top: var(--vspace-1);
-    padding-bottom: var(--vspace-3);
     color: var(--color-text-light)
 }
 
