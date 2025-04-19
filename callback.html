@@ -3,20 +3,17 @@
 <head>
     <title>Spotify Auth Callback</title>
     <script>
-        // Extract token from URL hash
         const hash = window.location.hash.substring(1);
+        console.log('Callback Hash:', hash); // Debug
         const params = new URLSearchParams(hash);
-        
         if (params.get('access_token')) {
-            // Success - store token and close
             localStorage.setItem('spotify_access_token', params.get('access_token'));
             localStorage.setItem('spotify_token_expiry', Date.now() + (params.get('expires_in') * 1000));
-            window.opener.postMessage('spotify-auth-success', '*');
+            window.opener.postMessage({ type: 'spotify-auth', hash }, window.location.origin);
             window.close();
         } else {
-            // Error handling
-            console.error('Auth error:', params.get('error'));
-            window.opener.postMessage('spotify-auth-error', '*');
+            console.error('Auth error:', params.get('error') || 'No error specified');
+            window.opener.postMessage({ type: 'spotify-auth-error', error: params.get('error') || 'Unknown error' }, window.location.origin);
             window.close();
         }
     </script>
