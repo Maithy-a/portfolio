@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Spotify Callback</title>
+    <title>Spotify Auth Callback</title>
     <script>
-        if (window.opener) {
-            window.opener.postMessage({
-                type: 'spotify-auth',
-                hash: window.location.hash
-            }, window.location.origin);
-            setTimeout(() => window.close(), 1000);
+        // Extract token from URL hash
+        const hash = window.location.hash.substring(1);
+        const params = new URLSearchParams(hash);
+        
+        if (params.get('access_token')) {
+            // Success - store token and close
+            localStorage.setItem('spotify_access_token', params.get('access_token'));
+            localStorage.setItem('spotify_token_expiry', Date.now() + (params.get('expires_in') * 1000));
+            window.opener.postMessage('spotify-auth-success', '*');
+            window.close();
         } else {
-            console.error('No opener window found');
-            document.body.innerHTML = '<p>Error: No opener window found. Please close this window and try again.</p>';
+            // Error handling
+            console.error('Auth error:', params.get('error'));
+            window.opener.postMessage('spotify-auth-error', '*');
+            window.close();
         }
     </script>
 </head>
 <body>
-    <p>You can close this window now.</p>
+    Redirecting...
 </body>
 </html>
