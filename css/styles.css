@@ -3060,19 +3060,16 @@ img.u-pull-left {
 
 .ss-go-top a:focus,
 .ss-go-top a:hover {
-    background-color: var(--color-white)
+    background-color: var(--color-gray-3);
 }
 
-.ss-go-top a:focus i,
-.ss-go-top a:hover i {
+.ss-go-top a:focus svg,
+.ss-go-top a:hover svg {
     color: black;
     transition: color .3s ease-in-out
 }
 
-.ss-go-top i {
-    color: var(--color-gray-10);
-    transition: color .3s ease-in-out
-}
+
 
 @media screen and (max-width:600px) {
     .ss-copyright span {
