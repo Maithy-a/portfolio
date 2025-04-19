@@ -1,9 +1,13 @@
 
-const clientId = '056d2e3508944718af2541522201b066';
-const redirectUrl = 'https://bmaithya.vercel.app/callback.html';
-
+const clientId = '056d2e3508944718af2541522201b066'; 
+const redirectUri = 'https://bmaithya.vercel.app/callback.html';
 let token = localStorage.getItem('spotify_access_token');
 let tokenExpiry = localStorage.getItem('spotify_token_expiry');
+
+function initSpotifyAuth() {
+    const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=token&scope=user-read-currently-playing`;
+    window.location.href = authUrl;
+  }
 
 if (token && tokenExpiry && Date.now() < tokenExpiry) {
     startWidget(token);
@@ -27,7 +31,7 @@ if (token && tokenExpiry && Date.now() < tokenExpiry) {
 
 function loginToSpotify() {
     const scope = 'user-read-currently-playing';
-    const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUrl)}&scope=${scope}&response_type=token&show_dialog=true`;
+    const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&scope=${scope}&response_type=token&show_dialog=true`;
 
     window.open(authUrl, 'SpotifyLogin', 'width=500,height=600');
 }
@@ -58,6 +62,8 @@ async function fetchNowPlaying() {
     }
 }
 
+document.getElementById('spotify-widget').addEventListener('click', initSpotifyAuth);
+
 function updateWidget(data) {
     if (!data || !data.item) {
         showNotPlaying();
@@ -75,3 +81,4 @@ function showNotPlaying() {
     document.getElementById('spotify-track').innerHTML = '<i>No track playing</i>';
     document.getElementById('spotify-artist').textContent = '';
 }
+
