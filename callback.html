@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spotify Callback</title>
+    <script>
+        if (window.opener) {
+            window.opener.postMessage({
+                type: 'spotify-auth',
+                hash: window.location.hash
+            }, window.location.origin);
+            setTimeout(() => window.close(), 1000);
+        } else {
+            console.error('No opener window found');
+            document.body.innerHTML = '<p>Error: No opener window found. Please close this window and try again.</p>';
+        }
+    </script>
+</head>
+<body>
+    <p>You can close this window now.</p>
+</body>
+</html>
