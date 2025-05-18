@@ -17,10 +17,7 @@
     <meta name="p:domain_verify" content="8fe21a1a2637f4f2cc0c659a308ce415" />
     <meta name="msvalidate.01" content="1D29ECD43BC2DC7BC5E25C82BB46C2D3" />
     <title>BMaithya</title>
-    <!-- 
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="138b2c25-60a6-499b-be5f-a1019297fc78" type="text/javascript" async></script> -->
 
-    <!-- Clarity tracking code for https://bmaithya.vercel.app -->
     <script>
         (function (c, l, a, r, i, t, y) {
             c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
@@ -28,6 +25,7 @@
             y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
         })(window, document, "clarity", "script", "rdqp24ah3n");
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <link rel="stylesheet" href="css/vendor.css" />
     <link rel="stylesheet" href="css/styles.css" />
@@ -49,8 +47,14 @@
 
 <body id="top">
     <div id="preloader">
-        <div id="loader"></div>
+        <div class="loader">
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+        </div>
     </div>
+
+
     <div class="s-pagewrap">
         <div class="circles">
             <span></span><span></span><span></span><span></span><span></span>
@@ -58,19 +62,18 @@
         <header class="s-header">
             <div class="header-mobile">
                 <span class="mobile-home-link"><a class="home-link logo" rel="canonical"
-                        href="index.html">Maithya</a></span><a class="mobile-menu-toggle"
-                    href="#!"><span>Menu</span></a>
+                        href="#top">Maithya</a></span><a class="mobile-menu-toggle" href="#!"><span>Menu</span></a>
             </div>
             <div class="row wide main-nav-wrap">
                 <nav class="column lg-12 main-nav">
                     <ul>
-                        <li><a href="index.html" class="home-link logo">Maithya</a></li>
+                        <li><a href="#top" class="home-link logo">Maithya</a></li>
                         <li class="current">
-                            <a href="#intro" class="smoothscroll">Home</a>
+                            <a href="#intro" class="smoothscroll  ">Home</a>
                         </li>
-                        <li><a href="#about" class="smoothscroll">About</a></li>
-                        <li><a href="#works" class="smoothscroll">Work</a></li>
-                        <li><a href="#contact" class="smoothscroll">Contact</a></li>
+                        <li><a href="#about" class="smoothscroll  ">About</a></li>
+                        <li><a href="#works" class="smoothscroll  ">Projects</a></li>
+                        <li><a href="#contact" class="smoothscroll  ">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -85,22 +88,18 @@
                         <span class="text-huge-title">Web Designer, hobbyist, Student and developer.
                         </span>
                         <p>
-                            Hey there! I'm not just Maithya — I'm a web design wizard and
-                            code conjurer, crafting stunning, seamless websites that pop! My
-                            vibe? Soaking up new tech tricks and spilling the beans to
-                            inspire others. Dive into my digital playground and find your
-                            spark!
+                            I am an aspiring Junior — developer current pursuing my Bachelors and a strong passion for
+                            transforming Kenya's digital landscape.
+                            Through continuous learning and exploration of modern technologies, I aim to deliver
+                            innovative digital solutions that make essential services more accessible and efficient for
+                            all.
                         </p>
                     </div>
                     <ul class="intro-social">
                         <li><a href="https://github.com/Maithy-a">Github</a></li>
                         <li><a href="https://x.com/Maithy_a">Twitter</a></li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/maithya/">Linkedin</a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/_b0nni3._._">Instagram</a>
-                        </li>
+                        <li><a href="https://www.linkedin.com/in/maithya/">Linkedin</a></li>
+                        <li><a href="https://www.instagram.com/_b0nni3._._">Instagram</a></li>
                     </ul>
                 </div>
                 <span class="intro-scrolldown-wrapper"
@@ -109,12 +108,13 @@
                         role="button" tabindex="0">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="icon icon-tabler icons-tabler-outline icon-tabler-mouse">
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-down-dashed">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M6 3m0 4a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-4a4 4 0 0 1 -4 -4z" />
-                            <path d="M12 7l0 4" />
+                            <path d="M12 5v.5m0 3v1.5m0 3v6" />
+                            <path d="M18 13l-6 6" />
+                            <path d="M6 13l6 6" />
                         </svg>
-                        Scroll for more
+                        Explore More
                     </a>
                 </span>
             </section>
@@ -159,24 +159,6 @@
                                 </svg>
                             </a>
                         </div>
-                    </div>
-                </div>
-                <div class="row about-expertise" data-animate-block>
-                    <div class="column lg-12">
-                        <h2 class="text-pretitle" data-animate-el>My skill sets</h2>
-                        <ul class="skills-list h2" data-animate-el>
-                            <p>
-                                <li>Web Development (HTML, CSS, JS, PHP)</li>
-                                <li>Python Programming</li>
-                                <li>MySQL Database Management</li>
-                                <li>PC and Network Maintenance</li>
-                                <li>GitHub Actions & CI/CD</li>
-                                <li>Figma (UI/UX Design)</li>
-                                <li>API Implementation</li>
-                                <li>Network Administration</li>
-                                <li>MS Office Suite...
-                            </p>
-                        </ul>
                     </div>
                 </div>
                 <div class="row about-timelines" data-animate-block>
@@ -289,10 +271,30 @@
                 </div>
 
                 <div id="clients" class="s-clients">
+
+                    <div class="row about-expertise" data-animate-block>
+                        <div class="column lg-12">
+                            <h2 class="text-pretitle" data-animate-el>My skill sets</h2>
+                            <ul class="skills-list h2" data-animate-el>
+                                <p>
+                                    <li>Web Development (HTML, CSS, JS, PHP)</li>
+                                    <li>Python Programming</li>
+                                    <li>MySQL Database Management</li>
+                                    <li>PC and Network Maintenance</li>
+                                    <li>GitHub Actions & CI/CD</li>
+                                    <li>Figma (UI/UX Design)</li>
+                                    <li>API Implementation</li>
+                                    <li>Network Administration</li>
+                                    <li>MS Office Suite...
+                                </p>
+                            </ul>
+                        </div>
+                    </div>
+
                     <div class="row s-clients__content-block width-sixteen-col">
                         <div class="column lg-12">
-                            <h2 class="text-pretitle">Tools and Resources</h2>
-                            <p class="h2">
+                            <h2 class="text-pretitle" data-animate-el>Tools and Resources</h2>
+                            <p class="h2" data-animate-el>
                                 I have worked with a variety of tools and resources to enhance
                                 my development process and deliver high-quality projects.
                             </p>
@@ -598,8 +600,8 @@
                     <div class="column lg-12">
                         <h2 class="text-pretitle">Get In Touch</h2>
                         <p class="h1">
-                            Have a question or want to chat about design, tech, or art?
-                            Shoot me a message!
+                            Thanks for stopping by, I’m currently looking to join a new team of creative designers and
+                            developers. If you think we might be a good fit for one another, shoot me a message
                         </p>
                     </div>
                 </div>
@@ -607,8 +609,8 @@
                     <div class="column lg-3 md-5 tab-6 stack-on-550 contact-block">
                         <h3 class="text-pretitle">Reach me at</h3>
                         <p class="contact-links">
-                            <a href="mailto:bmaithya000@gmail.com" class="mailtoui">bmaithya000@gmail.com</a><br />
-                            <a href="tel:+254110007950">+254-110-007-950</a>
+                            <a href="mailto:bmaithya000@gmail.com" class="mailtoui">Email</a><br />
+                            <a href="tel:+254110007950">Phone</a>
                         </p>
                     </div>
                     <div class="column lg-4 md-5 tab-6 stack-on-550 contact-block">
@@ -643,7 +645,7 @@
                         <span>Copyright &copy; <span id="currentYear"></span></span><span>Maithya</span>
                         <div class="disclaimer">
                             Designed & Created by
-                            <a href="https://github.com/Maithy-a" target="_blank">Maithya</a>
+                            <a href="https://github.com/Maithy-a" target="_blank">Maithya </a>
                         </div>
                     </div>
                     <div class="ss-go-top">
@@ -661,20 +663,6 @@
                         document.getElementById("currentYear").textContent =
                             new Date().getFullYear();
                         const root = document.documentElement;
-                        const marqueeContent =
-                            document.querySelector("ul.marquee-content");
-                        const marqueeElementsDisplayed = getComputedStyle(
-                            root
-                        ).getPropertyValue("--marquee-elements-displayed");
-                        root.style.setProperty(
-                            "--marquee-elements",
-                            marqueeContent.children.length
-                        );
-                        for (let i = 0; i < marqueeElementsDisplayed; i++) {
-                            marqueeContent.appendChild(
-                                marqueeContent.children[i].cloneNode(true)
-                            );
-                        }
                     </script>
                 </div>
             </footer>
