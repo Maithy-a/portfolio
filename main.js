@@ -81,7 +81,7 @@
     const startTime = Date.now();
     window.addEventListener("load", function () {
       const loadDuration = Date.now() - startTime;
-      const delay = Math.max(0, 10 - loadDuration); // Adjust delay to ensure preloader is visible for at least 0ms
+      const delay = Math.max(0, 4500 - loadDuration);
       setTimeout(() => {
         documentElement.classList.remove("ss-preload");
         documentElement.classList.add("ss-loaded");
