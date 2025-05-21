@@ -5,4 +5,5 @@ Welcome to my portfolio repository! This collection showcases my work as a web d
 
 ![image](https://github.com/user-attachments/assets/981d792a-dbf9-4786-93da-6fde080aade6)
 ![image](https://github.com/user-attachments/assets/11a1ac97-9593-4c29-aed4-ccb3f51669e6)
+![image](https://github.com/user-attachments/assets/671a998b-b7a2-4fdd-b036-085d7dcf802c)
 
