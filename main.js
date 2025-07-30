@@ -18,7 +18,7 @@
     .add({
       targets: "#loader",
       opacity: 0,
-      duration: 1000,
+      duration: 400,
       begin: () => window.scrollTo(0, 0),
     })
     .add({
