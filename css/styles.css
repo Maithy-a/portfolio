@@ -2556,7 +2556,7 @@ img.u-pull-left {
     padding: 0
 }
 
-.clients-list__item a {
+.clients-list__item span {
     display: block;
     padding: var(--vspace-1) var(--vspace-0_75);
     transition: all .5s ease-in;
@@ -2565,7 +2565,7 @@ img.u-pull-left {
     text-align: center
 }
 
-.clients-list__item a:focus, .clients-list__item a:hover {
+.clients-list__item span:focus, .clients-list__item span:hover {
     background-color: #0c2870
 }
 
