@@ -73,17 +73,25 @@
     <link rel="manifest" href="images/icons/favicon_io/site.webmanifest" />
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5M8XLW73TR"></script>
+<!-- Google Tag Manager -->
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-5M8XLW73TR');
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-W86L2JK6');
 </script>
 
 <body id="top">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W86L2JK6" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
     <div id="preloader" style="display:flex ; flex-direction: column; justify-content:center;align-items:center;">
         <div class="loader">
             <div class="box1"></div>
@@ -91,6 +99,7 @@
             <div class="box3"></div>
         </div>
     </div>
+
     <div class="s-pagewrap">
         <div class="circles"><span></span><span></span><span></span><span></span><span></span></div>
         <header class="s-header">
@@ -645,6 +654,7 @@
             </footer>
         </main>
     </div>
+
     <script src="plugins.js" defer></script>
     <script src="main.js" defer></script>
 </body>
